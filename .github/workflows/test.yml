@@ -17,8 +17,8 @@ jobs:
 
       - name: Install dependencies
         run: composer install
-        working-directory: testing
+        working-directory: unit testing
       
       - name: Run test
         run: vendor/bin/phpunit
-        working-directory: testing
+        working-directory: unit testing
