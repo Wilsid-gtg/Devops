@@ -1,0 +1,29 @@
+name: PHP Unit Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Ambil kode dari repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+          coverage: xdebug
+
+      # 3. Install Composer dependencies
+      - name: Install dependencies
+        run: composer install
+
+      # 4. Jalankan unit test + coverage
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit --coverage-text
