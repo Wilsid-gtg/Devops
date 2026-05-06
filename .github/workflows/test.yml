@@ -20,5 +20,7 @@ jobs:
         working-directory: testing/unit testing
       
       - name: Run test
-        run: vendor/bin/phpunit
-        working-directory: testing/unit testing
+        working-directory: "testing/unit testing"
+        run: |
+          chmod +x vendor/bin/phpunit
+          php vendor/bin/phpunit
