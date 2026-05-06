@@ -18,6 +18,11 @@ jobs:
       - name: Install dependencies
         run: composer install
         working-directory: testing/unit testing
+
+      - name: Run PHPUnit with minimum coverage
+        working-directory: testing/unit testing
+        run: |
+          php vendor/bin/phpunit --coverage-text --fail-on-low-coverage=70
       
       - name: Run test
         working-directory: "testing/unit testing"
