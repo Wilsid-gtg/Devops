@@ -27,5 +27,5 @@ jobs:
       - name: Run test
         working-directory: "testing/unit testing"
         run: |
-          chmod +x vendor/bin/phpunit --coverage-text --fail-on-low-coverage=70
+          chmod +x vendor/bin/phpunit
           php vendor/bin/phpunit
