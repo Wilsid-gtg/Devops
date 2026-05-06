@@ -3,7 +3,7 @@
   "description": "Simple PHP register with testing",
   "require": {},
   "require-dev": {
-    "phpunit/phpunit": "^10"
+    "phpunit/phpunit": "^9.6"
   },
   "autoload": {
     "psr-4": {
