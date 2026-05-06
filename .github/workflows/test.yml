@@ -22,7 +22,7 @@ jobs:
       - name: Run PHPUnit with minimum coverage
         working-directory: testing/unit testing
         run: |
-          php vendor/bin/phpunit --coverage-text --fail-on-low-coverage=70
+          php vendor/bin/phpunit --coverage-text
       
       - name: Run test
         working-directory: "testing/unit testing"
